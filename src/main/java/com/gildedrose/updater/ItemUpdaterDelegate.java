@@ -1,4 +1,4 @@
-package com.gildedrose.item;
+package com.gildedrose.updater;
 
 import com.gildedrose.Item;
 
@@ -10,12 +10,12 @@ public class ItemUpdaterDelegate {
     private final List<ItemUpdater> itemUpdaterList = new ArrayList<>();
 
     public ItemUpdaterDelegate() {
-        itemUpdaterList.add(new Plus5DexterityVest());
-        itemUpdaterList.add(new SulfurasHandOfRagnaros());
-        itemUpdaterList.add(new ElixirOfTheMongoose());
-        itemUpdaterList.add(new ConjuredManaCake());
-        itemUpdaterList.add(new BackstagePassesToTafkal80EtcConcert());
-        itemUpdaterList.add(new AgedBrie());
+        itemUpdaterList.add(new Plus5DexterityVestUpdater());
+        itemUpdaterList.add(new SulfurasHandOfRagnarosUpdater());
+        itemUpdaterList.add(new ElixirOfTheMongooseUpdater());
+        itemUpdaterList.add(new ConjuredManaCakeUpdater());
+        itemUpdaterList.add(new BackstagePassesToTafkal80EtcConcertUpdater());
+        itemUpdaterList.add(new AgedBrieUpdater());
     }
 
     public void updateItemQuality(Item item) {

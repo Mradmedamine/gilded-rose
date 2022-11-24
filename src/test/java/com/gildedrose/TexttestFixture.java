@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.item.*;
+import com.gildedrose.updater.*;
 
 public class TexttestFixture {
     public static void main(String[] args) {

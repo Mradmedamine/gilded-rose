@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.item.ItemUpdaterDelegate;
+import com.gildedrose.updater.ItemUpdaterDelegate;
 
 class GildedRose {
     Item[] items;

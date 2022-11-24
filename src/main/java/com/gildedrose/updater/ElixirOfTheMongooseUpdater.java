@@ -1,8 +1,8 @@
-package com.gildedrose.item;
+package com.gildedrose.updater;
 
 import com.gildedrose.Item;
 
-public class ElixirOfTheMongoose extends ItemUpdater {
+public class ElixirOfTheMongooseUpdater extends BaseItemUpdater {
 
     @Override
     public boolean isApplicable(Item item) {

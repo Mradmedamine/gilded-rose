@@ -1,8 +1,8 @@
-package com.gildedrose.item;
+package com.gildedrose.updater;
 
 import com.gildedrose.Item;
 
-public class Plus5DexterityVest extends ItemUpdater {
+public class Plus5DexterityVestUpdater extends BaseItemUpdater {
 
     @Override
     public boolean isApplicable(Item item) {

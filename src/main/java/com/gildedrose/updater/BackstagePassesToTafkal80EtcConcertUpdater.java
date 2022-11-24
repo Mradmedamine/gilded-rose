@@ -1,8 +1,8 @@
-package com.gildedrose.item;
+package com.gildedrose.updater;
 
 import com.gildedrose.Item;
 
-public class BackstagePassesToTafkal80EtcConcert extends ItemUpdater {
+public class BackstagePassesToTafkal80EtcConcertUpdater extends BaseItemUpdater {
 
     @Override
     public void updateValue(Item item) {

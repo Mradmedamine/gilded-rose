@@ -1,8 +1,8 @@
-package com.gildedrose.item;
+package com.gildedrose.updater;
 
 import com.gildedrose.Item;
 
-public abstract class ItemUpdater {
+public abstract class BaseItemUpdater implements ItemUpdater {
 
     protected static final Integer MAX_QUALITY = 50;
     protected static final Integer MIN_QUALITY = 0;
@@ -15,7 +15,5 @@ public abstract class ItemUpdater {
         }
         item.sellIn--;
     }
-
-    public abstract boolean isApplicable(Item item);
 
 }

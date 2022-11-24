@@ -1,8 +1,8 @@
-package com.gildedrose.item;
+package com.gildedrose.updater;
 
 import com.gildedrose.Item;
 
-public class AgedBrie extends ItemUpdater {
+public class AgedBrieUpdater extends BaseItemUpdater {
 
     @Override
     public void updateValue(Item item) {
