@@ -1,19 +1,22 @@
 package com.gildedrose.item;
 
-public class AgedBrie extends Item {
+import com.gildedrose.Item;
 
-    public AgedBrie(int sellIn, int quality) {
-        super("Aged Brie", sellIn, quality);
+public class AgedBrie extends ItemUpdater {
+
+    @Override
+    public void updateValue(Item item) {
+        if (item.quality < MAX_QUALITY) {
+            item.quality++;
+        }
+        if (item.sellIn <= 0 && item.quality < MAX_QUALITY) {
+            item.quality++;
+        }
+        item.sellIn--;
     }
 
     @Override
-    public void updateValue() {
-        if (quality < 50) {
-            quality++;
-        }
-        if (sellIn <= 0 && quality < 50) {
-            quality++;
-        }
-        sellIn--;
+    public boolean isApplicable(Item item) {
+        return "Aged Brie".equals(item.name);
     }
 }

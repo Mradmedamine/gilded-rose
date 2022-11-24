@@ -1,26 +1,28 @@
 package com.gildedrose.item;
 
-public class BackstagePassesToTafkal80EtcConcert extends Item {
+import com.gildedrose.Item;
 
-    public BackstagePassesToTafkal80EtcConcert(int sellIn, int quality) {
-        super("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
+public class BackstagePassesToTafkal80EtcConcert extends ItemUpdater {
+
+    @Override
+    public void updateValue(Item item) {
+        if (item.quality < MAX_QUALITY) {
+            item.quality++;
+        }
+        if (item.sellIn < 11 && item.quality < MAX_QUALITY) {
+            item.quality++;
+        }
+        if (item.sellIn < 6 && item.quality < MAX_QUALITY) {
+            item.quality++;
+        }
+        if (item.sellIn <= 0) {
+            item.quality = 0;
+        }
+        item.sellIn--;
     }
 
     @Override
-    public void updateValue() {
-        if (quality < 50) {
-            quality++;
-        }
-        if (sellIn < 11 && quality < 50) {
-            quality++;
-        }
-        if (sellIn < 6 && quality < 50) {
-            quality++;
-        }
-        if (sellIn <= 0) {
-            quality = 0;
-        }
-        sellIn--;
+    public boolean isApplicable(Item item) {
+        return "Backstage passes to a TAFKAL80ETC concert".equals(item.name);
     }
-
 }

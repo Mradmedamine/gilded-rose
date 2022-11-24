@@ -1,13 +1,16 @@
 package com.gildedrose.item;
 
-public class SulfurasHandOfRagnaros extends Item {
+import com.gildedrose.Item;
 
-    public SulfurasHandOfRagnaros(int sellIn) {
-        super("Sulfuras, Hand of Ragnaros", sellIn, 80);
+public class SulfurasHandOfRagnaros extends ItemUpdater {
+
+    @Override
+    public void updateValue(Item item) {
+        //DO NOTHING
     }
 
     @Override
-    public void updateValue() {
-        //DO NOTHING
+    public boolean isApplicable(Item item) {
+        return "Sulfuras, Hand of Ragnaros".equals(item.name);
     }
 }

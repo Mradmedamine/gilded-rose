@@ -1,7 +1,11 @@
 package com.gildedrose.item;
 
-public class ElixirOfTheMongoose extends Item {
-    public ElixirOfTheMongoose(int sellIn, int quality) {
-        super("Elixir of the Mongoose", sellIn, quality);
+import com.gildedrose.Item;
+
+public class ElixirOfTheMongoose extends ItemUpdater {
+
+    @Override
+    public boolean isApplicable(Item item) {
+        return "Elixir of the Mongoose".equals(item.name);
     }
 }

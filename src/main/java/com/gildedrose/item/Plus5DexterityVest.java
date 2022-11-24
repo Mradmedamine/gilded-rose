@@ -1,7 +1,11 @@
 package com.gildedrose.item;
 
-public class Plus5DexterityVest extends Item {
-    public Plus5DexterityVest(int sellIn, int quality) {
-        super("+5 Dexterity Vest", sellIn, quality);
+import com.gildedrose.Item;
+
+public class Plus5DexterityVest extends ItemUpdater {
+
+    @Override
+    public boolean isApplicable(Item item) {
+        return "+5 Dexterity Vest".equals(item.name);
     }
 }
